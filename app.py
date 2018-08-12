@@ -11,6 +11,12 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('home.html')
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+@app.route('/search')
+def search():
+    return render_template('search.html')
 
 # Running the Flask app
 if __name__ == "__main__":

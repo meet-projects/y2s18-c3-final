@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Final Project</title>
+        <title>Helder Helper</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1>My Final Project by Dr. Subhi Beidas</h1>
+        <div class="container">
+        <div class="menu">
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+        <a href="{{url_for('search')}}">Search</a>
+        <a href="{{url_for('log_in')}}">Log in</a>
+        </div>
+        <div class="content">
+        <a href="{{url_for('my_acount')}}">My Acount</a>
+        <h1>Elder Helper</h1>
+        <p>information</p>
+        <a href="{{url_for('sign_up')}}">Sign up as an volunteer</a>
+        <a href="{{url_for('sing_up')}}">Sing up as a elder</a>
+        </div>
+        </div>
     </body>
 </html>
