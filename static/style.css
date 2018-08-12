@@ -4,4 +4,243 @@
     margin: 0;
 }
 
+
+body {
+    background: #666666;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333;
+    }
+    
+    a {
+    text-decoration: none;
+    color: #362e19;
+    }
+    a:hover {
+    text-decoration: underline;
+    color: #4a3c19;
+    }
+    
+    #wrap {
+    margin: 20px auto;
+    width: 1000px;
+    }
+    
+    
+    #header {
+    background: #666666 url("images/header.jpg") no-repeat;
+    height: 200px;
+    width: auto;
+    }
+    #header h1 { 
+    font-size: 38px;
+    letter-spacing: -1px;
+    padding: 70px 0 0 40px;
+    color: #fff;
+    }
+    #header h1 a { 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: -2px;
+    }
+    #header h1 a:hover {
+    color: #000;
+    }
+    #header h2 {
+    font-size: 19px;
+    color: #EFECE0;
+    padding: 20px 0 0 40px;
+    letter-spacing: -1px;
+    font-weight: 100;
+    }
+    
+    #menu {
+    height: 40px;
+    line-height: 40px;
+    background: #666666 url(images/menu.jpg) no-repeat;
+    }
+    #menu ul {
+    list-style-type: none;
+    padding-left: 40px;
+    }
+    #menu ul li {
+    display: block;
+    float: left;
+    }
+    #menu ul li a {
+    padding: 0 20px 0 0;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 18px;
+    color: #aaa;
+    }
+    #menu ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    #content {
+    background: #666666 url(images/content.jpg) repeat-y;
+    padding: 10px;
+    }
+    
+    #likes {
+        height: 5px;
+        width: 50%;
+        background: #0000ee;
+        float: left;
+    }
+    
+    #dislikes {
+        height: 5px;
+        width: 50%;
+        background: #ccc;
+        float: right;
+    }
+    
+    #bar {
+        margin: 0 auto;
+        width: 150%;
+        
+        
+    }
+    
+    .left {
+    
+    width: 958px;
+    text-align: justify;
+    padding: 10px;
+    font-size: 14px;
+    background: #fff;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    
+    }
+    .left h2 {
+    font-size: 20px;
+    font-weight: 100;
+    padding: 15px 0 7px 0;
+        height: 37px;
+        width: 585px;
+    }
+    .left h2 a {
+    text-decoration: none;
+    }
+    .left h2 a:hover {
+    text-decoration: underline;
+    }
+    
+    .right {
+    float: right;
+    width: 180px;
+    background: #fff;
+    padding: 10px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    }
+    .right h2 {
+    height: 24px;
+    line-height: 24px;
+    color: #000;
+    font-size: 17px;
+    padding-left: 10px;
+    
+    }
+    .right ul {
+    padding: 10px 0 15px 30px;
+    list-style-type: square;
+    }
+    .right ul li a {
+    font-weight: 100;
+    font-size: 12px;
+    }
+    .right ul li a:hover {
+    
+    }
+    
+    #bottom {
+    background: #d4ccae url(images/bottom.jpg) no-repeat;
+    padding: 10px 0;
+    }
+    
+    #footer {
+    text-align: center;
+    font-size: 11px;
+    }
+    
+    .buttons {
+        background-image: url('images/abstract_art_black_and_white_red_wallpaper_1080p_hd.jpg');
+        border-radius: 40px;
+        font-family: Forte;
+        color: whitesmoke;
+        font-size: 34px;
+        padding: 5px 5px 5px 5px;
+        border-width: 0px;
+        width: 30%;
+    }
+    
+    .info {
+        background-color: whitesmoke;
+        border-radius: 40px;
+        font-family: David;
+        color: darkred;
+        border-color: black;
+        font-size: 36px;
+        padding: 10px 10px 10px 10px;
+        border-width: 4px;
+        }
+    
+    .txt {
+        background-image: url('images/189030.jpg');
+        border-radius: 40px;
+        font-family: Forte;
+        color: whitesmoke;
+        border-color: Blue;
+        font-size: 36px;
+        padding: 10px 10px 10px 10px;
+        border-width: 4px;
+        width: 25%;
+    }
+    
+    .login {
+        border-radius: 40px;
+        font-family: Forte;
+        color: darkred;
+        font-size: 36px;
+        text-align: center;
+        padding: 5px 5px 5px 5px;
+        width: 25%;
+    }
+    
+    .name{
+        font-family:Forte;
+        color: darkblue;
+        font-size: 22px;
+    }
+    
+    .like {
+        border-radius: 40px;
+        font-family: Forte;
+        color: darkred;
+        font-size: 30px;
+        text-align: center;
+        padding: 5px 5px 5px 5px;
+        width: 25%;
+    }
+    
+    .gender {
+        border-radius: 40px;
+        font-family: Forte;
+        color: black;
+        font-size: 36px;
+        text-align: center;
+        padding: 5px 5px 5px 5px;
+        width: 25%;
+    }
+    
 /* Put your styles BELOW this line */
