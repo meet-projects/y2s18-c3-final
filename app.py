@@ -20,6 +20,6 @@ def search():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    return render_template('log_in.html')
 # Running the Flask app
 app.run(debug=True)
