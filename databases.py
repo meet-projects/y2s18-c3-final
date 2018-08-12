@@ -22,15 +22,15 @@ def add_volunteer(name, age, location, phone, info):
     session.add(vol)
     session.commit()
 
-def get_all_volunteers():
-    vols = session.query(Volunteer).all()
-    return vols
-
 def add_elder(name, location, phone, info):
     print("Added an elder!")
     elder = Elder(name=name, location=location, phone=phone, info=info)
     session.add(elder)
     session.commit()
+
+def get_all_volunteers():
+    vols = session.query(Volunteer).all()
+    return vols
 
 def get_all_elders():
     elders = session.query(Elder).all()
@@ -39,3 +39,7 @@ def get_all_elders():
 def get_elder_by_location(loc):
     elders = session.query(Elder).filter_by(location=loc).all()
     return elders
+
+def get_vol_by_elder(id):
+    vol = session.query(Elder).filter_by(volunteer_id=id).first()
+    return vol
