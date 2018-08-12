@@ -18,6 +18,16 @@ def contact():
 def search():
     return render_template('search.html')
 
+@app.route('/login')
+def login():
+    return render_template('log_in.html')
+
+@app.route('/myaccount')
+def myacc():
+    return render_template('my_acount.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('sign_up.html')
 # Running the Flask app
-if __name__ == "__main__":
-    app.run(debug=True)
+app.run(debug=True)
