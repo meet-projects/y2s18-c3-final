@@ -1,16 +1,13 @@
 body {
-    background-image: url("bg.png");
+	background-image: url('bg.png');
+	background-attachment: fixed;
 }
 
-.container {
-	position: relative;
-	top: 100px;
-	left: 100px;
-}
+
 .content{
 	position: relative;
-	top: 180px;
-	left: 100px;
+	top: 50%;
+	left: 50%;
 }
 .menu{
 	position: relative;
@@ -19,7 +16,6 @@ body {
 }
 #vo {
 	font-family: "Times New Roman", Times, serif;
-	color:blue;
 }
 #el {
     font-family: "Times New Roman", Times, serif;
