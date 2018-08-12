@@ -21,5 +21,13 @@ def search():
 @app.route('/login')
 def login():
     return render_template('log_in.html')
+
+@app.route('/myaccount')
+def myacc():
+    return render_template('my_acount.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('sign_up.html')
 # Running the Flask app
 app.run(debug=True)
