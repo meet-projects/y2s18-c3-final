@@ -28,10 +28,14 @@ body {
 	text-decoration: none;
 }
 #log_in:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
-
-
+.nav-link{
+	color:gray;
+}
+.nav-link:hover{
+	color:black;
+}
 .menu{
 	position: relative;
 	top: 10px;
