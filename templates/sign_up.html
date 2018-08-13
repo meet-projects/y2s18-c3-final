@@ -2,10 +2,20 @@
 <html>
     <head>
         <title>YOUR_TITLE_HERE</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}">
     </head>
 
     <body>
-        YOUR_CONTENT_HERE
+        <h1>Sign Up</h1>
+        <input type="text" name="first_name" placeholder="First Name"><br>
+        <input type="text" name="last_name" placeholder="Last Name"><br>
+        <input type="text" name="user_name" placeholder="User Name"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="password" name="confirm_password" placeholder="Confirm Password"><br>
+        <input type="number" name="phone_number" placeholder="Phone Number"><br>
+        <input type="number" name="Age" placeholder="Age"><br>
+        <input type="radio" name="user_type" value="Elder">Elder
+        <input type="radio" name="user_type" value="Volunteer">Volunteer<br>
+        <input type="submit" value="Sign Up">
     </body>
 </html>
