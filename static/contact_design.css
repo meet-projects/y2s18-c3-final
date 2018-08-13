@@ -3,7 +3,9 @@
     padding: 0;
     margin: 0;
 }
-body {	background-image: url('bgoth.png');}
+body {	background-image: url('bgoth.png');
+background-attachment: fixed;
+background-size:100%}
 h1 {
     position: absolute;
     top: 20px;
