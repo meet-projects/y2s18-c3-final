@@ -2,10 +2,27 @@
 <html>
     <head>
         <title>Sign Up</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}">
     </head>
 
     <body>
+            <ul class="nav nav-tabs" style="background-color: white">
+                    <li class="nav-item" style="color:gray">
+                        <a class="nav-link" href="{{url_for('home')}}"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('contact')}}"> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('search')}}"> Search </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('myacc')}}">My Acount</a>
+                    </li>
+                </ul>
         <form action="/signup" method="post">
             <h1>Sign Up</h1>
             
@@ -14,10 +31,13 @@
             <input type="password" name="confirm_password" placeholder="Confirm Password"><br>
             <input type="number" name="phone_number" placeholder="Phone Number"><br>
             <input type="number" name="Age" placeholder="Age"><br>
+            
             <input type="text" name="location" placeholder="Location"><br>
             <input type="radio" name="user_type" value="Elder">Elder
             <input type="radio" name="user_type" value="Volunteer">Volunteer<br>
             <input type="submit" value="Sign Up">
         </form> 
+        <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
     </body>
 </html>
