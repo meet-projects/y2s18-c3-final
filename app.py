@@ -23,7 +23,7 @@ def search():
         elders = get_elder_by_location(location)
         return render_template('search_results.html', elders=elders)
 
-@app.route('/login')
+@app.route('/login',methods=['GET', 'POST'])
 def login():
     return render_template('log_in.html')
 
@@ -31,10 +31,12 @@ def login():
 def myacc():
     return render_template('my_acount.html')
 
-@app.route('/signup')
+@app.route('/signup',methods=['GET', 'POST'])
 def signup():
     if request.form['user_type'] == Elder:
-        add_elder(request.form['full_name'],request.form['password'],request.form['phone_number'],request.form['Age'])
+        add_elder(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"",None)
+    else:
+        add_volunteer(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"")
     return render_template('sign_up.html')
 # Running the Flask app
 app.run(debug=True)
