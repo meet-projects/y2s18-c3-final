@@ -9,7 +9,7 @@ body {background-image: url('bgoth.png');
 .pa{
     position: absolute;
     font-size: 40px;
-    top:80px;
+    top:130px;
     left:50px;
     font-style: normal;
 
@@ -18,7 +18,7 @@ h1{
     position: absolute;
     color:green;
     font-size: 50px;
-    top:10px;
+    top:60px;
     left:50px;
 }
 #thank{
@@ -26,5 +26,5 @@ h1{
     color:green;
     font-size: 50px;
     top:400px;
-    left:700px;
+    left:900px;
 }
