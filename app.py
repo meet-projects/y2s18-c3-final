@@ -33,6 +33,8 @@ def myacc():
 
 @app.route('/signup')
 def signup():
+    if request.form['user_type'] == Elder:
+        add_elder(request.form['full_name'],request.form['password'],request.form['phone_number'],request.form['Age'])
     return render_template('sign_up.html')
 # Running the Flask app
 app.run(debug=True)

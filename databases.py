@@ -16,15 +16,15 @@ session = DBSession()
 # Your database functions are located under here (querying, adding items, etc.)
 
 # Example of adding a student:
-def add_volunteer(name, age, location, phone, info):
+def add_volunteer(name,password, age, location, phone, info):
     print("Added a volunteer!")
-    vol = Volunteer(name=name, age=age, location=location, phone=phone, info=info)
+    vol = Volunteer(name=name,password=password, age=age, location=location, phone=phone, info=info)
     session.add(vol)
     session.commit()
 
-def add_elder(name, location, phone, info, volunteer_id):
+def add_elder(name,password,age, location, phone, info, volunteer_id):
     print("Added an elder!")
-    elder = Elder(name=name, location=location, phone=phone, info=info, volunteer_id=volunteer_id)
+    elder = Elder(name=name,password=password,age=age, location=location, phone=phone, info=info, volunteer_id=volunteer_id)
     session.add(elder)
     session.commit()
 
