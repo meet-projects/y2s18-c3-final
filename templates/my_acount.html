@@ -2,10 +2,27 @@
 <html>
     <head>
         <title>Welcome to you'r account!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='account.css') }}">
     </head>
 
     <body>
+            <ul class="nav nav-tabs" style="background-color: white">
+                    <li class="nav-item" style="color:gray">
+                        <a class="nav-link" href="{{url_for('home')}}"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('contact')}}"> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('search')}}"> Search </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('myacc')}}">My Acount</a>
+                    </li>
+                </ul>
         <h1>Welcome to you'r account!</h1>
         <div class="pa">
         <p>name:</p>
@@ -17,5 +34,7 @@
         <div id="thank">
         <p>Thanks for <br>helping the<br>community!</p>
         </div>
+        <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
     </body>
 </html>
