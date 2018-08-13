@@ -10,8 +10,9 @@ body {
 }
 .content{
 	position: absolute;
+	width:100%;
 	top: 20%;
-	left: 30%;
+	text-align: center;
 	font-size: 40px;
 }
 
@@ -43,22 +44,27 @@ body {
 	display: inline;
 	padding-right: 30px;
 	color: gray;
-	padding-top: 20px;
+	padding-top: 40px;
 }
 
+.sing_up{
+	left: 10%;
+}
 .sign_up{
 	background-color: green;
     color: white;
-    padding: 14px 25px;
+    padding: 30px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+	display: inline;
+	
 }
 #vo {
 	font-family: "Times New Roman", Times, serif;
-	left:150px;
+	right: 25%;
+	margin-right:40px;
 }
 #el {
 	font-family: "Times New Roman", Times, serif;
-	left: 50px;
+	margin: 20px;
 }
