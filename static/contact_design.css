@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-body {background-color:#BABABA;}
+body {	background-image: url('bgoth.png');}
 h1 {
     position: absolute;
     top: 20px;
