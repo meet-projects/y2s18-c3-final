@@ -33,10 +33,11 @@ def myacc():
 
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
-    if request.form['user_type'] == Elder:
-        add_elder(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"",None)
-    else:
-        add_volunteer(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"")
+    if request.method=='POST':
+        if request.form['user_type'] == 'Elder':
+            add_elder(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"",None)
+        else:
+            add_volunteer(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"")
     return render_template('sign_up.html')
 # Running the Flask app
 app.run(debug=True)
