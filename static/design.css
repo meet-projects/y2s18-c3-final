@@ -30,7 +30,11 @@ h1{
 	top:50px;
 	color: black;
 	text-decoration: none;
+<<<<<<< HEAD
 	font: 20px arial, sans-serif;
+=======
+	font: 30px arial, sans-serif;
+>>>>>>> 6e3c2c872af5f6a64a7ebece3931706bbb895e0b
 }
 #log_in:hover {
 	text-decoration: underline;
