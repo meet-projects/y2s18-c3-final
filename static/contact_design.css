@@ -1,0 +1,31 @@
+* {
+    /* Removes extra spacing from all elements on the page */
+    padding: 0;
+    margin: 0;
+}
+body {background-color:#BABABA;}
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    font-size:80px;
+    color: #258928;
+}
+#ways{
+    position: absolute;
+    top: 120px;
+    left: 330px;
+    font-size: 30px;
+}
+#gmail{
+    position: absolute;
+    top: 180px;
+    left: 330px;
+    font-size: 50px;
+}
+#phone{
+    position: absolute;
+    top: 240px;
+    left: 330px;
+    font-size: 50px;
+}
