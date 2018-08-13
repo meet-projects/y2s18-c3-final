@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Helder Helper</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}">
-        
-    </head>
-    <body>
-        <div class="menu">
-        <a href="{{url_for('home')}}">   _Home    </a>
-        <a href="{{url_for('contact')}}">   _Contact   </a>
-        <a href="{{url_for('search')}}">  _Search  </a>
+
+<head>
+    <title>Helder Helper</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}">
+
+</head>
+
+<body>
+    <div class="menu">
+        <a href="{{url_for('home')}}"> _Home </a>
+        <a href="{{url_for('contact')}}"> _Contact </a>
+        <a href="{{url_for('search')}}"> _Search </a>
         <a href="{{url_for('myacc')}}">_My Acount</a>
-        </div>
-        <div class=log>
+    </div>
+    <div class=log>
         <a href="{{url_for('login')}}">Log in</a>
-        </div>
-        <div class="content">
+    </div>
+    <div class="content">
         <h1>Elder Helper</h1>
         <p>information</p>
         <a id="vo" class="sign_up" href="{{url_for('signup')}}">Sign up as an volunteer</a>
         <br>
         <a id="el" class="sign_up" href="{{url_for('signup')}}">Sing up as a elder</a>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
