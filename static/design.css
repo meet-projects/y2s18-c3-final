@@ -2,17 +2,24 @@ body {
 	background-image: url('bg.png');
 	background-attachment: fixed;
 }
-
-
 .content{
 	position: relative;
-	top: 50%;
-	left: 50%;
+	bottom: 10%;
+	left: 30%;
+	font-size: 40px;
+}
+
+.log{
+	position: relative;
+	top: 10%;
+	left: 5%;
+	font-size: 40px;
 }
 .menu{
 	position: relative;
 	top: 10px;
 	left: 50%;
+	font-size: 40px;
 }
 #vo {
 	font-family: "Times New Roman", Times, serif;
