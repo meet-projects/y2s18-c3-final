@@ -13,6 +13,7 @@ class Volunteer(Base):
     id = Column(Integer, primary_key = True)
     name = Column(String)
     age = Column(Integer)
+    password = Column(String)
     location = Column(String)
     phone = Column(Integer)
     info = Column(String)
@@ -26,8 +27,10 @@ class Elder(Base):
     id = Column(Integer, primary_key = True)
     name = Column(String)
     location = Column(String)
+    age = Column(Integer)
     phone = Column(Integer)
     info = Column(String)
+    password = Column(String)
     volunteer_id = Column(Integer, ForeignKey(Volunteer.id))
     volunteer = relationship('Volunteer')
 
