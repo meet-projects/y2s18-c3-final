@@ -53,3 +53,9 @@ def delete_all_vols():
 def delete_all_elders():
 	session.query(Elder).delete()
 	session.commit()
+
+# delete_all_elders()
+# add_elder("Yosi", "jerusalem", 34545243, "my info", None)
+# add_elder("Mordi", "jerusalem", 2221198, "my info", None)
+# add_elder("Simon", "Nazareth", 9772113, "my info", None)
+
