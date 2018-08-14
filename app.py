@@ -57,20 +57,14 @@ def login():
     return render_template('log_in.html')
 
 
-@app.route('/myaccount')
+@app.route('/myaccounte')
 def myacc():
-<<<<<<< HEAD
-    
-    return render_template('my_acount.html')
-
-=======
     eld = query_by_elder_name(session['username'])
     return render_template('my_acount.html', eld=eld)
-@app.route('/myaccount')
-def myacc():
+@app.route('/myaccountv')
+def myaccv():
     vol = query_by_vol_name(session['username'])
     return render_template('my_acount.html', eld=eld)
->>>>>>> dda25145c2ec1e563a03ea259a8155e63e1056f9
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""
