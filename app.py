@@ -25,6 +25,13 @@ def search():
 
 @app.route('/login',methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        name="smth"
+        password="smthh"
+        if request.form['password']==password and request.form['username']=='username':
+            session['logged_in'] = True
+        else:
+            return "<h1>Wrong Password</h1>"
     return render_template('log_in.html')
 
 @app.route('/myaccount')
