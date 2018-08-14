@@ -18,13 +18,19 @@ body {
 	color: rgb(39, 146, 57);
 	text-shadow: 2px 2px 4px #ffffff;
 	font-family: "Times New Roman", Times, serif;
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #5ec56c86; */
+	
+	
 }
 h1{
 	font-family: "Times New Roman", Times, serif;
 	font-size: 75px;
 	margin-bottom: 35px;
 	color: rgb(29, 114, 36);
-    text-shadow: 2px 2px 4px #ffffff;
+	text-shadow: 2px 2px 4px #ffffff;
+	
+	
 }
 .log{
 	position: absolute;
@@ -111,4 +117,5 @@ h1{
 	margin-left:150px;
 	margin-right: 150px;
 	font-size: 25px;
+
 }
