@@ -40,3 +40,16 @@ input {
     background-color: rgba(161, 167, 161, 0.37);
     
 }
+
+#sign_up {
+    margin: 30px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(28, 165, 165, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(157, 235, 209, 0.479);
+
+}
+
+#sign_up:hover {
+    background-color: rgba(0, 255, 255, 0.397);
+    border: 10px solid lightgreen;
+}
