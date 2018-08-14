@@ -14,9 +14,16 @@ body {
 h1{
     font-size: 25px;
 }
-div{
+#results{
     margin-left:15px;
     padding-left:10px;
+    font-family: cursive;
+    color: white;
+    text-shadow: 2px 2px 4px #504c4c;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
 }
 /* input {
     border-radius:15px; 
@@ -46,8 +53,7 @@ button {
 div {
     /* padding: 15px;
     border: 2px solid gray */
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
     
 }
 
@@ -122,3 +128,23 @@ button {
     border:none;
     cursor:pointer;
 }
+
+#search_form {
+    margin-left: 430px;
+    margin-top: 150px;
+    
+}
+
+#welcome{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 55px;
+	margin-bottom: 35px;
+	color: rgb(29, 114, 36);
+    text-shadow: 2px 2px 4px #ffffff;
+    margin:40px;
+    margin-left: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 520px;
+    background-color: rgba(15, 236, 89, 0.13);
+}
+
