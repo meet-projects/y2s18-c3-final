@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Welcome to you'r account!</title>
+        <title>Welcome to your account!</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
@@ -25,10 +25,10 @@
                 </ul>
         <h1>Welcome to you'r account!</h1>
         <div class="pa">
-        <p>name:</p>
-        <p>location:</p>
-        <p>age:</p>
-        <p>number:</p>
+        <p>name: {{vol.name}}</p>
+        <p>location:</p>{{get_vol_by_name(name).location}}
+        <p>age:</p>get_vol_by_name(name).age
+        <p>number:</p>get_vol_by_name(name).number
         </div>
         <div id="thank">
         <p>Thanks for <br>helping the<br>community!</p>
