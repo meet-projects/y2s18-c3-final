@@ -48,6 +48,7 @@ def login():
 
 @app.route('/myaccount')
 def myacc():
+
     return render_template('my_acount.html')
 
 @app.route('/signup',methods=['GET', 'POST'])

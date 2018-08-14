@@ -23,10 +23,15 @@
                         <a class="nav-link" href="{{url_for('myacc')}}">My Account</a>
                     </li>
                 </ul>
+
+        <h1 id="welcome">Elder Helper Search:</h1>
+
+        <div id="search">
         <form action="/search" method="post" id="search_form">
             <input type="text" placeholder="Location" name="search" style="width: 300px; height: 30px">
             <button type="submit" value="Submit">search</button>
         </form>
+        </div>
         <script src="{{ url_for('static', filename='jquery.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
     </body>
