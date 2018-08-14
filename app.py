@@ -2,15 +2,20 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import *
+from databases import get_all_elders, get_elder_by_location, get_all_volunteers, get_vol_by_elder, delete_all_elders, delete_all_vols, query_by_elder_name, add_elder, add_volunteer
 
 # Starting the flask app
 app = Flask(__name__)
-
+app.secret_key= b'gh57658tsxyh'
 # App routing code here
 @app.route('/')
 def home():
+    if 'username' not in session:
+        return render_template('log_in.html')
     return render_template('home.html')
+def logout():
+    session.RemoveAll()
+    return render_template('log_in.html')
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
@@ -40,6 +45,7 @@ def login():
             return "<h1>Wrong User Name</h1>"
     return render_template('log_in.html')
 
+
 @app.route('/myaccount')
 def myacc():
 
@@ -54,9 +60,13 @@ def signup():
                 add_elder(request.form['full_name'],request.form['password'],
                 request.form['Age'],request.form['location'],request.form['phone_number'],"",None)
             else:
-                a="passwords dont match"
+                a="Passwords don't match"
         else:
-            add_volunteer(request.form['full_name'],request.form['password'],request.form['Age'],request.form['location'],request.form['phone_number'],"")
+            if request.form['password']==request.form['confirm_password']:
+                add_volunteer(request.form['full_name'],request.form['password'],
+                request.form['Age'],request.form['location'],request.form['phone_number'],"")
+            else:
+                a="Passwords don't match"
     return render_template('sign_up.html',a=a)
 # Running the Flask app
 app.run(debug=True)

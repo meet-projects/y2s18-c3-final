@@ -21,10 +21,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url_for('myacc')}}">My Account</a>
                     </li>
-                </ul>
+            </ul>
+
+            <h1 id="welcome">Elder Helper Search:</h1>
+
             {% for e in elders %}
             <br>
-            <div style="background: whitesmoke">
+            <div style="background: rgba(87, 197, 133, 0.61)" id="results">
                 <h1>Name: {{ e.name }}</h1>
                 Location: {{ e.location }}<br>
                 Info: {{ e.info }}<br>
