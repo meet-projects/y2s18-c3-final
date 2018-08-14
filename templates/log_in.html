@@ -23,6 +23,7 @@
                         <a class="nav-link" href="{{url_for('myacc')}}">My Acount</a>
                     </li>
                 </ul>
+        <div id="box">
         <form action="/login" method="POST">
             <h1>Log In</h1>
             <input type="text" name="username" id="username" placeholder="User Name"><br>
@@ -31,7 +32,8 @@
             <input type="submit" value="Log In">
         </form>
 
-        <a href="{{url for('sign_up.html')}}">Sign up for ElderHelper</a>
+        <a href="{{url_for('signup')}}" id="sign_up">Don't have an acount?</a>
+        </div>
 
         <script src="{{ url_for('static', filename='jquery.js') }}"></script>
         <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>    
