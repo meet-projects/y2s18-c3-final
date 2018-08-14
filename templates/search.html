@@ -2,14 +2,32 @@
 <html>
     <head>
         <title>Search Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search.css') }}">
     </head>
 
     <body>
+            <ul class="nav nav-tabs" style="background-color: white">
+                    <li class="nav-item" style="color:gray">
+                        <a class="nav-link" href="{{url_for('home')}}"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('contact')}}"> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('search')}}"> Search </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('myacc')}}">My Account</a>
+                    </li>
+                </ul>
         <form action="/search" method="post" id="search_form">
             <input type="text" placeholder="Location" name="search" style="width: 300px; height: 30px">
             <button type="submit" value="Submit">search</button>
         </form>
-
+        <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
     </body>
 </html>

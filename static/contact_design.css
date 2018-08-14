@@ -6,6 +6,7 @@
 body {	background-image: url('bgoth.png');
 background-attachment: fixed;
 background-size:100%}
+
 h1 {
     font-size:65px;
     background-color: grey;
@@ -16,10 +17,10 @@ h1 {
     text-shadow: 2px 2px black;
 }
 .nav-link{
-    color:black;
+    color:gray;
 }
 .nav-link:hover{
-    color:gray;
+    color:black;
 }
 .con{
     width:70%;
