@@ -23,23 +23,14 @@
                         <a class="nav-link" href="{{url_for('myacc')}}">My Acount</a>
                     </li>
                 </ul>
-        
-        <h1>Welcome to you'r account!</h1>
-        {%if object.ty=="vol"%}
+
+        <h1>Welcome to your account!</h1>
         <div class="pa">
-        <p>name: {{vol.name}}</p>
-        <p>location:{{vol.location}}</p>
-        <p>age: {{vol.age}}</p>
-        <p>number:{{vol.number}}</p>
-        </div>
-        {%elif object.ty=="eld"%}
-        <div class="pa">
-                <p>name: {{eld.name}}</p>
-                <p>location:{{eld.location}}</p>
-                <p>age: {{eld.age}}</p>
-                <p>number:{{eld.number}}</p>
+                <p>name: e</p>
+                <p>location:{eld.location}}</p>
+                <p>age: eld.age}}</p>
+                <p>number:eld.number</p>
                 </div>
-        {% endif %}
                
         <div id="thank">
         <p>Thanks for <br>helping the<br>community!</p>
