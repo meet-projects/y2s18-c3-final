@@ -8,6 +8,8 @@ background-attachment: fixed;
 background-size:100%}
 h1 {
     font-size:65px;
+    background-color: grey;
+    
     font-style: bold;
     color: #258928;
     font-family: "Times New Roman", Times, serif;
