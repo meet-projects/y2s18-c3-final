@@ -27,6 +27,11 @@ def add_elder(name,password,age, location, phone, info, volunteer_id):
     elder = Elder(name=name,password=password,age=age, location=location, phone=phone, info=info, volunteer_id=volunteer_id)
     session.add(elder)
     session.commit()
+def get_vol_by_name(name):
+    volunteer = session.query(
+    Volunteer).filter_by(
+    name=name).first()
+    return volunteer
 
 def get_all_volunteers():
     vols = session.query(Volunteer).all()
