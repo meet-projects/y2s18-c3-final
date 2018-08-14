@@ -54,6 +54,10 @@ def delete_all_elders():
 	session.query(Elder).delete()
 	session.commit()
 
+def query_by_elder_name(name):
+    elder=session.query(Elder).filter_by(name=name).first()
+    return elder
+
 #delete_all_elders()
 # add_elder("Yosi", "jerusalem", 34545243, "my info", None)
 # add_elder("Mordi", "jerusalem", 2221198, "my info", None)

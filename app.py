@@ -26,12 +26,18 @@ def search():
 @app.route('/login',methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        name="smth"
-        password="smthh"
-        if request.form['password']==password and request.form['username']=='username':
-            session['logged_in'] = True
+        name=request.form['username']
+        password=request.form['password']
+        eld=query_by_elder_name(name)
+        if eld!=None:
+            if password==eld.password:
+                session.add(eld)
+                a="<h1>Welcome</h1>"
+                return render_template('home.html',a=a)
+            else:
+                return "<h1>Wrong Password</h1>"
         else:
-            return "<h1>Wrong Password</h1>"
+            return "<h1>Wrong User Name</h1>"
     return render_template('log_in.html')
 
 @app.route('/myaccount')
