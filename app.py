@@ -21,12 +21,12 @@ def logout():
 @app.route('/contact')
 def contact():
     if 'username' not in session:
-        return render_template('contact.html')
+        return render_template('log_in.html')
     return render_template('contact.html')
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if 'username' not in session:
-        return render_template('search.html')
+        return render_template('log_in.html')
     if request.method == 'GET':
         return render_template('search.html')
     else:
@@ -78,10 +78,14 @@ def login():
 
 @app.route('/myaccounte')
 def myacc():
+    if 'username' not in session:
+        return render_template('log_in.html')
     eld = query_by_elder_name(session['username'])
     return render_template('my_acount.html', eld=eld)
 @app.route('/myaccountv')
 def myaccv():
+    if 'username' not in session:
+        return render_template('log_in.html')
     vol = get_vol_by_name(session['username'])
     return render_template('my_acount.html', vol=vol)
 @app.route('/signup',methods=['GET', 'POST'])
