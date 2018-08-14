@@ -21,6 +21,12 @@ h2{
     
 
 }
+.nav-link{
+    color:gray;
+}
+.nav-link:hover{
+    color:black;
+}
 
 form {
     margin: 25px;
