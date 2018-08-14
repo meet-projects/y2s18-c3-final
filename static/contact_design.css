@@ -3,18 +3,18 @@
     padding: 0;
     margin: 0;
 }
-body {	background-image: url('bgoth.png');
+body {	background-image: url('bg.png');
 background-attachment: fixed;
 background-size:100%}
 
 h1 {
     font-size:65px;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.356);
     
     font-style: bold;
     color: #258928;
     font-family: "Times New Roman", Times, serif;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px 4px #67e24f;
 }
 .nav-link{
     color:gray;
@@ -26,29 +26,53 @@ h1 {
     width:70%;
     text-align: center;
     position: relative;
-    background-color:whitesmoke;
+    background-color:rgba(105, 214, 138, 0.555);
     margin: auto;
     margin-top:20px;
-    box-shadow:10px 10px gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #more{
     
     font-size: 25px;
     padding-left:20px;
+    text-shadow: 2px 4px 4px #00000057;
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(95, 79, 79, 0.842);
 }
 #learn{
     font-size:60px;
-    color: green ;
-    font-family: "Times New Roman", Times, serif;
     padding-left:20px;
     text-shadow: 2px 2px black;
+    color: rgba(8, 99, 8, 0.637);
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px 4px #67e24f;
 }
+
+#about {
+    background-color:rgba(127, 202, 149, 0.555);
+    margin: auto;
+    margin-top:20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 35x;
+}
+
+
 #ways{
     font-size: 30px;
+    text-shadow: 2px 4px 4px #00000057;
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(95, 79, 79, 0.842);
 }
 #gmail{
     font-size: 25px;
+    text-shadow: 2px 2px 4px #00000057;
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(95, 79, 79, 0.842);
 }
 #phone{
     font-size: 25px;
+    text-shadow: 2px 2px 4px #00000057;
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(95, 79, 79, 0.842);
+    
 }
