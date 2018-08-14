@@ -18,9 +18,13 @@ def logout():
     return render_template('log_in.html')
 @app.route('/contact')
 def contact():
+    if 'username' not in session:
+        return render_template('log_in.html')
     return render_template('contact.html')
 @app.route('/search', methods=['GET', 'POST'])
 def search():
+    if 'username' not in session:
+        return render_template('log_in.html')
     if request.method == 'GET':
         return render_template('search.html')
     else:
@@ -37,7 +41,9 @@ def login():
         if eld!=None:
             if password==eld.password:
 
+
                 session['username'] = eld.username
+
 
                 session['username']=eld.name
                 session['password']=eld.password
@@ -48,6 +54,8 @@ def login():
                 session['info']=eld.info
                 session['vol_id']=eld.volunteer_id
 
+
+
                 a="<h1>Welcome</h1>"
                 return render_template('home.html',a=a)
             else:
@@ -57,12 +65,12 @@ def login():
     return render_template('log_in.html')
 
 
-@app.route('/myaccount')
+@app.route('/myaccounte')
 def myacc():
     eld = query_by_elder_name(session['username'])
     return render_template('my_acount.html', eld=eld)
-@app.route('/myaccount')
-def myacc():
+@app.route('/myaccountv')
+def myaccv():
     vol = query_by_vol_name(session['username'])
     return render_template('my_acount.html', eld=eld)
 @app.route('/signup',methods=['GET', 'POST'])

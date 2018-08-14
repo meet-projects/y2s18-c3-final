@@ -20,7 +20,7 @@
                         <a class="nav-link" href="{{url_for('search')}}"> Search </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('myacc')}}">My Account</a>
+                        <a class="nav-link" href="{{url_for('myacc')}}">My Acount</a>
                     </li>
                 </ul>
         <form action="/login" method="POST">
@@ -32,6 +32,8 @@
             <input type=radio name="user" value="vol">Volunteer
             <input type="submit" value="Log In">
         </form>
+
+        <a href="{{url for('sign_up.html')}}">Sign up for ElderHelper</a>
 
         <script src="{{ url_for('static', filename='jquery.js') }}"></script>
         <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>    
