@@ -2,7 +2,9 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import get_all_elders, get_elder_by_location, get_all_volunteers, get_vol_by_elder, delete_all_elders, delete_all_vols, query_by_elder_name, add_elder, add_volunteer
+from databases import get_all_elders, get_elder_by_location, get_all_volunteers
+from databases import get_vol_by_elder, delete_all_elders, delete_all_vols, query_by_elder_name, add_elder
+from databases import add_volunteer,get_vol_by_name
 
 # Starting the flask app
 app = Flask(__name__)
@@ -38,6 +40,7 @@ def login():
         name=request.form['username']
         password=request.form['password']
         eld=query_by_elder_name(name)
+        vol = get_vol_by_name(name)
         if eld!=None:
             if password==eld.password:
 
@@ -60,7 +63,19 @@ def login():
                 return render_template('home.html',a=a)
             else:
                 return "<h1>Wrong Password</h1>"
-        else:
+        elif vol!=None:
+            if password==vol.password:
+                session['username']=vol.name
+                session['password']=vol.password
+                session['age']=vol.age
+                session['location']=vol.location
+                session['phone']=vol.phone
+                session['id']=vol.id
+                session['info']=vol.info
+                a="<h1>Welcome</h1>"
+                return render_template('home.html',a=a)
+            else:
+                return "<h1>Wrong Password</h1>"
             return "<h1>Wrong User Name</h1>"
     return render_template('log_in.html')
 
@@ -71,8 +86,8 @@ def myacc():
     return render_template('my_acount.html', eld=eld)
 @app.route('/myaccountv')
 def myaccv():
-    vol = query_by_vol_name(session['username'])
-    return render_template('my_acount.html', eld=eld)
+    vol = get_vol_by_name(session['username'])
+    return render_template('my_acount.html', vol=vol)
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""
