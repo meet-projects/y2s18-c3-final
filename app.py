@@ -40,6 +40,9 @@ def login():
         eld=query_by_elder_name(name)
         if eld!=None:
             if password==eld.password:
+<<<<<<< HEAD
+                session['username'] = eld.username
+=======
                 session['username']=eld.name
                 session['password']=eld.password
                 session['age']=eld.age
@@ -48,6 +51,7 @@ def login():
                 session['id']=eld.id
                 session['info']=eld.info
                 session['vol_id']=eld.volunteer_id
+>>>>>>> 3027fb87826e9d8c7e47245e8c2511d4c31d3f32
                 a="<h1>Welcome</h1>"
                 return render_template('home.html',a=a)
             else:
@@ -59,9 +63,18 @@ def login():
 
 @app.route('/myaccount')
 def myacc():
+<<<<<<< HEAD
     
     return render_template('my_acount.html')
 
+=======
+    eld = query_by_elder_name(session['username'])
+    return render_template('my_acount.html', eld=eld)
+@app.route('/myaccount')
+def myacc():
+    vol = query_by_vol_name(session['username'])
+    return render_template('my_acount.html', eld=eld)
+>>>>>>> dda25145c2ec1e563a03ea259a8155e63e1056f9
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""

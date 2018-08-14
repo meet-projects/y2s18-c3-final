@@ -13,6 +13,8 @@ body {
 }
 h1{
     font-size: 25px;
+    /* color: #296833;
+    text-shadow: 2px 2px 4px #ffffff; */
 }
 #results{
     margin-left:15px;
@@ -22,6 +24,7 @@ h1{
     text-shadow: 2px 2px 4px #504c4c;
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
     
     
 }
