@@ -32,7 +32,11 @@ def get_vol_by_name(name):
     Volunteer).filter_by(
     name=name).first()
     return volunteer
-
+def get_elder_by_name(name):
+    elder = session.query(
+    Elder).filter_by(
+    name=name).first()
+    return elder
 def get_all_volunteers():
     vols = session.query(Volunteer).all()
     return vols

@@ -10,8 +10,8 @@ app.secret_key= b'gh57658tsxyh'
 # App routing code here
 @app.route('/')
 def home():
-    if 'username' not in session:
-        return render_template('log_in.html')
+    '''if 'username' not in session:
+        return render_template('log_in.html')'''
     return render_template('home.html')
 def logout():
     session.RemoveAll()
@@ -36,7 +36,18 @@ def login():
         eld=query_by_elder_name(name)
         if eld!=None:
             if password==eld.password:
-                session.add(eld)
+<<<<<<< HEAD
+                session['username'] = eld.username
+=======
+                session['username']=eld.name
+                session['password']=eld.password
+                session['age']=eld.age
+                session['location']=eld.location
+                session['phone']=eld.phone
+                session['id']=eld.id
+                session['info']=eld.info
+                session['vol_id']=eld.volunteer_id
+>>>>>>> 3027fb87826e9d8c7e47245e8c2511d4c31d3f32
                 a="<h1>Welcome</h1>"
                 return render_template('home.html',a=a)
             else:
@@ -48,9 +59,12 @@ def login():
 
 @app.route('/myaccount')
 def myacc():
-
-    return render_template('my_acount.html')
-
+    eld = query_by_elder_name(session['username'])
+    return render_template('my_acount.html', eld=eld)
+@app.route('/myaccount')
+def myacc():
+    vol = query_by_vol_name(session['username'])
+    return render_template('my_acount.html', eld=eld)
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""
