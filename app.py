@@ -44,10 +44,6 @@ def login():
         if eld!=None:
             if password==eld.password:
 
-
-                session['username'] = eld.username
-
-
                 session['username']=eld.name
                 session['password']=eld.password
                 session['age']=eld.age
