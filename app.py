@@ -36,7 +36,7 @@ def login():
         eld=query_by_elder_name(name)
         if eld!=None:
             if password==eld.password:
-                session.add(eld)
+                session['username'] = eld.username
                 a="<h1>Welcome</h1>"
                 return render_template('home.html',a=a)
             else:
@@ -48,9 +48,12 @@ def login():
 
 @app.route('/myaccount')
 def myacc():
-
-    return render_template('my_acount.html')
-
+    eld = query_by_elder_name(session['username'])
+    return render_template('my_acount.html', eld=eld)
+@app.route('/myaccount')
+def myacc():
+    vol = query_by_vol_name(session['username'])
+    return render_template('my_acount.html', eld=eld)
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""
