@@ -9,11 +9,9 @@ background-size:100%}
 
 h1 {
     font-size:65px;
-    
-    font-style: bold;
     color: #258928;
-    font-family: "Times New Roman", Times, serif;
-    text-shadow: 2px 2px 4px #67e24f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 4px #b4c9b0;
 }
 .nav-link{
     color:gray;
@@ -36,16 +34,16 @@ h1 {
     font-size: 25px;
     padding-left:20px;
     text-shadow: 2px 4px 4px #00000057;
-    font-family: "Times New Roman", Times, serif;
-    color: darkslategray;;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(66, 75, 70, 0.815);
 }
 #learn{
     font-size:60px;
     padding-left:20px;
     text-shadow: 2px 2px black;
-    color: rgba(8, 99, 8, 0.637);
-    font-family: "Times New Roman", Times, serif;
-    text-shadow: 2px 2px 4px #67e24f;
+    color: #258928;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 4px #b4c9b0;
 }
 
 #about {
@@ -60,19 +58,19 @@ h1 {
 #ways{
     font-size: 30px;
     text-shadow: 2px 4px 4px #00000057;
-    font-family: "Times New Roman", Times, serif;
-    color: darkslategray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(66, 75, 70, 0.815);
 }
 #gmail{
     font-size: 25px;
     text-shadow: 2px 2px 4px #00000057;
-    font-family: "Times New Roman", Times, serif;
-    color: darkslategray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(66, 75, 70, 0.815);
 }
 #phone{
     font-size: 25px;
     text-shadow: 2px 2px 4px #00000057;
-    font-family: "Times New Roman", Times, serif;
-    color: darkslategray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(66, 75, 70, 0.815);
     
 }
