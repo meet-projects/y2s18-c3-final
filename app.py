@@ -19,7 +19,7 @@ def home():
 @app.route('/logout',methods=['POST'])
 def logout():
     session.clear()
-    return render_template('log_in.html')
+    return render_template('home.html')
 @app.route('/contact')
 def contact():
     if 'username' not in session:

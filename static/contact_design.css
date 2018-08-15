@@ -9,7 +9,6 @@ background-size:100%}
 
 h1 {
     font-size:65px;
-    background-color: rgba(128, 128, 128, 0.356);
     
     font-style: bold;
     color: #258928;
@@ -23,21 +22,22 @@ h1 {
     color:black;
 }
 .con{
+
     width:70%;
     text-align: center;
     position: relative;
-    background-color:rgba(105, 214, 138, 0.555);
+    background-color:rgba(255, 255, 255, 0.5);
     margin: auto;
     margin-top:20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #more{
-    
+ 
     font-size: 25px;
     padding-left:20px;
     text-shadow: 2px 4px 4px #00000057;
     font-family: "Times New Roman", Times, serif;
-    color: rgba(95, 79, 79, 0.842);
+    color: darkslategray;;
 }
 #learn{
     font-size:60px;
@@ -49,7 +49,7 @@ h1 {
 }
 
 #about {
-    background-color:rgba(127, 202, 149, 0.555);
+    background-color:rgba(255, 255, 255, 0.5);;
     margin: auto;
     margin-top:20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,18 +61,18 @@ h1 {
     font-size: 30px;
     text-shadow: 2px 4px 4px #00000057;
     font-family: "Times New Roman", Times, serif;
-    color: rgba(95, 79, 79, 0.842);
+    color: darkslategray;
 }
 #gmail{
     font-size: 25px;
     text-shadow: 2px 2px 4px #00000057;
     font-family: "Times New Roman", Times, serif;
-    color: rgba(95, 79, 79, 0.842);
+    color: darkslategray;
 }
 #phone{
     font-size: 25px;
     text-shadow: 2px 2px 4px #00000057;
     font-family: "Times New Roman", Times, serif;
-    color: rgba(95, 79, 79, 0.842);
+    color: darkslategray;
     
 }

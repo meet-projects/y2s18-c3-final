@@ -40,6 +40,15 @@ def get_elder_by_name(name):
 def get_all_volunteers():
     vols = session.query(Volunteer).all()
     return vols
+def delete_vol_by_name(name):
+    session.query(Volunteer).filter_by(
+    name=name).delete()
+    session.commit()
+def delete_eld_by_name(name):
+    session.query(Elder).filter_by(
+    name=name).delete()
+    session.commit()
+
 
 def get_all_elders():
     elders = session.query(Elder).all()
