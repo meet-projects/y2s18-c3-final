@@ -14,12 +14,12 @@ app.secret_key= b'gh57658tsxyh'
 def home():
     '''if 'username' not in session:
         return render_template('log_in.html')'''
-    return render_template('home.html')
+    return render_template('home.html', show_buttons=('username' not in session))
 
 @app.route('/logout',methods=['POST'])
 def logout():
     session.clear()
-    return render_template('home.html')
+    return home()
 @app.route('/contact')
 def contact():
     if 'username' not in session:
@@ -59,7 +59,7 @@ def login():
 
 
                 a="<h1>Welcome</h1>"
-                return render_template('home.html',a=a)
+                return redirect(url_for('home'))
             else:
                 return "<h1>Wrong Password</h1>"
         elif vol!=None:

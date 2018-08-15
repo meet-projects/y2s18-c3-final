@@ -32,16 +32,19 @@
             
         </li>
     </ul>
-    
+    {% if show_buttons %}
     <div class=log>
         <a id="log_in" href="{{url_for('login')}}">Log in</a>
     </div>
+    {% endif %}
     <div class="content">
         <h1>Elder Helper</h1>
         <p>give help to those who need it</p>
         <div class="sing_up">
+        {% if show_buttons %}
         <a id="vo"  class="btn btn-secondary"  href="{{url_for('signup')}}" role="button">Sign up as a volunteer</a>
         <a id="el"  class="btn btn-secondary" href="{{url_for('signup')}}" role="button">Sign up as an elder</a>
+        {% endif %}
         <p id="p1">our website will help you to find the help you need. throught the site you will have the opportunity to help the people who need it and help the community you live in.</p>
         </div>
     </div>
