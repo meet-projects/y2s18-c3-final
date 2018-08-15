@@ -26,15 +26,16 @@
         <div id="box">
         <form action="/login" method="POST">
             <h1>Log In</h1>
-            <input type="text" name="username" id="username" placeholder="User Name"><br>
+            <input type="text" name="username" id="username" placeholder="User Name" required><br>
             
-            <input type="password" name="password" id="password" placeholder="Password"><br>
-            <input type=radio name="user_type" value="eld">Elder
-            <input type=radio name="user_type" value="vol">Volunteer
+            <input type="password" name="password" id="password" placeholder="Password" required><br>
+            <input type=radio name="user_type" value="eld" required>Elder
+            <input type=radio name="user_type" value="vol" required>Volunteer
+            <h2>{{a}}</h2>
             <input type="submit" value="Log In">
         </form>
 
-        <a href="{{url_for('signup')}}" id="sign_up">Don't have an acount?</a>
+        <a href="{{url_for('signup')}}" id="sign_up">Don't have an account?</a>
         </div>
 
         <script src="{{ url_for('static', filename='jquery.js') }}"></script>

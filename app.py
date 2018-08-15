@@ -40,6 +40,7 @@ def popular_location(location):
     return render_template('search_results.html', elders=elders, location=location)
 @app.route('/login',methods=['GET', 'POST'])
 def login():
+    a=""
     if request.method == 'POST':
         name=request.form['username']
         password=request.form['password']
@@ -60,10 +61,10 @@ def login():
 
 
 
-                a="<h1>Welcome</h1>"
+                a="Welcome"
                 return redirect(url_for('home'))
             else:
-                return "<h1>Wrong Password</h1>"
+                a="Wrong Password"
         elif vol!=None:
             if password==vol.password:
                 session['username']=vol.name
@@ -73,12 +74,13 @@ def login():
                 session['id']=vol.id
                 session['info']=vol.info
                 session['user_type']=user_type
-                a="<h1>Welcome</h1>"
+                a="Welcome"
                 return render_template('home.html',a=a)
             else:
-                return "<h1>Wrong Password</h1>"
-            return "<h1>Wrong User Name</h1>"
-    return render_template('log_in.html')
+                a="Wrong Password"
+        else:
+            a="Username doesn't exist"
+    return render_template('log_in.html',a=a)
 
 
 @app.route('/myaccounte')
@@ -97,14 +99,19 @@ def signup():
             if request.form['password']==request.form['confirm_password']:
                 add_elder(request.form['full_name'],request.form['password'],
                 request.form['Age'],request.form['location'],request.form['phone_number'], request.form['info'], None)
+                session['hide_buttons'] = True
+                return redirect(url_for('home'))
             else:
                 a="Passwords don't match"
         else:
             if request.form['password']==request.form['confirm_password']:
                 add_volunteer(request.form['full_name'],request.form['password'],
                 request.form['Age'],request.form['location'],request.form['phone_number'], request.form['info'])
+                session['hide_buttons'] = True
+                return redirect(url_for('home'))
             else:
                 a="Passwords don't match"
     return render_template('sign_up.html',a=a)
+
 # Running the Flask app
 app.run(debug=True)
