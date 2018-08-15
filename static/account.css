@@ -24,6 +24,12 @@ body {background-image: url('bgoth.png');
     border-width: 0px 0px 0px 0px;
     box-shadow:6px 6px gray;
 }
+.nav-link{
+    color:gray;
+}
+.nav-link:hover{
+    color:black;
+}
 h1{
     box-shadow:10px 10px gray;
     position: absolute;

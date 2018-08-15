@@ -39,19 +39,20 @@ def login():
     if request.method == 'POST':
         name=request.form['username']
         password=request.form['password']
+        user_type=request.form['user_type']
         eld=query_by_elder_name(name)
         vol = get_vol_by_name(name)
         if eld!=None:
             if password==eld.password:
 
                 session['username']=eld.name
-                session['password']=eld.password
                 session['age']=eld.age
                 session['location']=eld.location
                 session['phone']=eld.phone
                 session['id']=eld.id
                 session['info']=eld.info
                 session['vol_id']=eld.volunteer_id
+                session['user_type']=user_type
 
 
 
@@ -62,12 +63,12 @@ def login():
         elif vol!=None:
             if password==vol.password:
                 session['username']=vol.name
-                session['password']=vol.password
                 session['age']=vol.age
                 session['location']=vol.location
                 session['phone']=vol.phone
                 session['id']=vol.id
                 session['info']=vol.info
+                session['user_type']=user_type
                 a="<h1>Welcome</h1>"
                 return render_template('home.html',a=a)
             else:
@@ -80,14 +81,10 @@ def login():
 def myacc():
     if 'username' not in session:
         return render_template('log_in.html')
-    eld = query_by_elder_name(session['username'])
-    return render_template('my_acount.html', eld=eld)
-@app.route('/myaccountv')
-def myaccv():
-    if 'username' not in session:
-        return render_template('log_in.html')
-    vol = get_vol_by_name(session['username'])
-    return render_template('my_acount.html', vol=vol)
+    if session['user_type']=="eld":
+        return render_template('my_acount.html', name=session['username'], location=session['location'], phone=session['phone'], age=session['age'])
+    elif session['user_type']=="vol":
+        return render_template('my_acount.html', name=session['username'], location=session['location'], phone=session['phone'], age=session['age'])
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""
