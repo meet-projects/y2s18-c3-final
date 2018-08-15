@@ -21,7 +21,7 @@ def logout():
 @app.route('/contact')
 def contact():
     if 'username' not in session:
-        return render_template('log_in.html')
+        return render_template('contact.html')
     return render_template('contact.html')
 @app.route('/search', methods=['GET', 'POST'])
 def search():
