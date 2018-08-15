@@ -25,12 +25,14 @@
         <li class="nav-item">
             <a class="nav-link" href="{{url_for('myacc')}}">My Account</a>
         </li>
+        {% if not show_buttons %}
         <li class="nav-item">
             <form action="/logout" method="POST">
                 <input type="submit" value="Log Out" class="nav-link">
             </form>
             
         </li>
+        {% endif %}
     </ul>
     {% if show_buttons %}
     <div class=log>
