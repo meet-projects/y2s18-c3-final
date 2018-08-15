@@ -95,7 +95,7 @@ def signup():
         if request.form['user_type'] == 'Elder':
             if request.form['password']==request.form['confirm_password']:
                 add_elder(request.form['full_name'],request.form['password'],
-                request.form['Age'],request.form['location'],request.form['phone_number'],"",None)
+                request.form['Age'],request.form['location'],request.form['phone_number'], request.form['info'], None)
             else:
                 a="Passwords don't match"
         else:
