@@ -17,7 +17,7 @@ class Volunteer(Base):
     location = Column(String)
     phone = Column(Integer)
     info = Column(String)
-    ty="vol"
+    user_type="vol"
     elders = relationship("Elder", back_populates="volunteer")
 
     def __repr__(self):
@@ -32,7 +32,7 @@ class Elder(Base):
     phone = Column(Integer)
     info = Column(String)
     password = Column(String)
-    ty="eld"
+    user_type="eld"
     volunteer_id = Column(Integer, ForeignKey(Volunteer.id))
     volunteer = relationship('Volunteer')
 
