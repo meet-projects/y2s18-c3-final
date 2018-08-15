@@ -15,13 +15,15 @@ def home():
     '''if 'username' not in session:
         return render_template('log_in.html')'''
     return render_template('home.html')
+
+@app.route('/logout',methods=['POST'])
 def logout():
-    session.RemoveAll()
+    session.clear()
     return render_template('log_in.html')
 @app.route('/contact')
 def contact():
     if 'username' not in session:
-        return render_template('contact.html')
+        return render_template('log_in.html')
     return render_template('contact.html')
 @app.route('/search', methods=['GET', 'POST'])
 def search():
@@ -92,7 +94,7 @@ def signup():
         if request.form['user_type'] == 'Elder':
             if request.form['password']==request.form['confirm_password']:
                 add_elder(request.form['full_name'],request.form['password'],
-                request.form['Age'],request.form['location'],request.form['phone_number'],"",None)
+                request.form['Age'],request.form['location'],request.form['phone_number'], request.form['info'], None)
             else:
                 a="Passwords don't match"
         else:
