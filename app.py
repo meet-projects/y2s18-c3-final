@@ -102,7 +102,7 @@ def signup():
         else:
             if request.form['password']==request.form['confirm_password']:
                 add_volunteer(request.form['full_name'],request.form['password'],
-                request.form['Age'],request.form['location'],request.form['phone_number'],"")
+                request.form['Age'],request.form['location'],request.form['phone_number'], request.form['info'])
             else:
                 a="Passwords don't match"
     return render_template('sign_up.html',a=a)
