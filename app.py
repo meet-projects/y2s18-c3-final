@@ -101,6 +101,7 @@ def signup():
                 request.form['Age'],request.form['location'],request.form['phone_number'], request.form['info'], None)
                 session['hide_buttons'] = True
                 return redirect(url_for('home'))
+
             else:
                 a="Passwords don't match"
         else:
