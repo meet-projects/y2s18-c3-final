@@ -84,9 +84,9 @@ def myacc():
     if 'username' not in session:
         return render_template('log_in.html')
     if session['user_type']=="eld":
-        return render_template('my_acount.html', name=session['username'], location=session['location'], phone=session['phone'], age=session['age'])
+        return render_template('my_acount.html', name=session['username'], location=session['location'], phone=session['phone'], age=session['age'], info=session['info'])
     elif session['user_type']=="vol":
-        return render_template('my_acount.html', name=session['username'], location=session['location'], phone=session['phone'], age=session['age'])
+        return render_template('my_acount.html', name=session['username'], location=session['location'], phone=session['phone'], age=session['age'],info=session['info'])
 @app.route('/signup',methods=['GET', 'POST'])
 def signup():
     a=""
