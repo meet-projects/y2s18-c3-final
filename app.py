@@ -35,7 +35,10 @@ def search():
         location = request.form['search']
         elders = get_elder_by_location(location)
         return render_template('search_results.html', elders=elders)
-
+@app.route('/search/<string:location>')
+def popular_location(location):
+    elders = get_elder_by_location(location)
+    return render_template('search_results.html', elders=elders, location=location)
 @app.route('/login',methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
