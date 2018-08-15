@@ -20,16 +20,16 @@
                         <a class="nav-link" href="{{url_for('search')}}"> Search </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('myacc')}}">My Acount</a>
+                        <a class="nav-link" href="{{url_for('myacc')}}">My Account</a>
                     </li>
                 </ul>
 
-        <h1>Welcome to your account!</h1>
+        <h1>Profile</h1>
         <div class="pa">
-                <p>name: </p>
-                <p>location:</p>
-                <p>age: </p>
-                <p>number:</p>
+                <p>name: {{name}}</p>
+                <p>location: {{location}}</p>
+                <p>age: {{age}}</p>
+                <p>phone: {{phone}}</p>
                 </div>
         
         <div id="thank">

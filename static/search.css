@@ -17,7 +17,7 @@ h1{
     text-shadow: 2px 2px 4px #ffffff; */
 }
 #results{
-    margin-left:15px;
+    margin-left:480px;
     padding-left:10px;
     font-family: cursive;
     color: white;
@@ -139,7 +139,7 @@ button {
 }
 
 #welcome{
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 55px;
 	margin-bottom: 35px;
 	color: rgb(29, 114, 36);
