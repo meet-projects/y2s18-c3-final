@@ -16,7 +16,8 @@ def home():
         return render_template('log_in.html')'''
     return render_template('home.html')
 def logout():
-    session.RemoveAll()
+    session.clear()
+    print(session)
     return render_template('log_in.html')
 @app.route('/contact')
 def contact():
