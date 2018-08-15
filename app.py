@@ -75,7 +75,7 @@ def login():
                 session['info']=vol.info
                 session['user_type']=user_type
                 a="Welcome"
-                return render_template('home.html',a=a)
+                return redirect(url_for('home'))
             else:
                 a="Wrong Password"
         else:
