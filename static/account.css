@@ -20,15 +20,16 @@ body {background-image: url('bg.png');
     text-decoration: underline ;
     border-block-end-width: 10px;
     border-block-end-color: black;
-    text-shadow: 2px 2px 4px gray;
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.411);
     padding: 30px 25px;
     padding-right: 240px;
-    background-color: lightgrey;
+    background-color: rgba(76, 197, 96, 0.452);
     border-radius: 5px;
-    color:#213823;
+    color:#2e7433;
     border-style: solid;
     border-width: 0px 0px 0px 0px;
-    box-shadow:6px 6px gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .nav-link{
     color:gray;
@@ -37,7 +38,7 @@ body {background-image: url('bg.png');
     color:black;
 }
 h1{
-    box-shadow:10px 10px gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
     color:green;
     font-size: 60px;
@@ -45,9 +46,9 @@ h1{
     top:60px;
     left:200px;
     padding: 10px 25px;
-    background-color: whitesmoke;
+    background-color: rgba(76, 197, 96, 0.452);
     border-radius: 5px;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
     font-family: "Times New Roman", Times, serif;
 }
 #thank{
