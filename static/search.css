@@ -144,7 +144,6 @@ button {
 
 #welcome{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
     font-size: 55px;
 	margin-bottom: 35px;
 	color: rgb(29, 114, 36);
@@ -155,4 +154,37 @@ button {
     width: 520px;
     background-color: rgba(15, 236, 89, 0.13);
 
+}
+
+#popular places {
+    
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(29, 114, 36);
+    text-shadow: 2px 2px 4px #ffffff;
+    margin: 15px;
+    margin-left: 500px;
+    margin-top: -25px;
+}
+
+.links {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(29, 114, 36);
+    text-shadow: 2px 2px 4px #ffffff;
+    margin: 15px;
+    margin-top: -25px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 45%;
+    background-color: rgba(68, 245, 136, 0.185);
+}
+
+#a1 {
+    margin-left: 500px;
+}
+
+.links:hover {
+    background-color: rgba(31, 190, 116, 0.534);
 }
